@@ -1,4 +1,4 @@
-FROM --platform=amd64 nvcr.io/nvidia/cuda:11.8.0-devel-ubuntu22.04 as base
+FROM --platform=amd64 nvcr.io/nvidia/cuda:12.2.0-devel-ubuntu22.04 as base
 
 ARG MAX_JOBS
 
