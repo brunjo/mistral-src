@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build deploy --file Dockerfile --tag mistral:$(date +%s)
+      run: docker build deploy --tag mistral:$(date +%s)
