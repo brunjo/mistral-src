@@ -24,6 +24,11 @@ RUN git clone https://github.com/NVIDIA/apex && \
 
 RUN pip3 install "xformers==0.0.22" "transformers==4.34.0" "vllm==0.2.0" "fschat[model_worker]==0.2.30"
 
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
+    apt install -y git-lfs && \
+    mkdir /workspace/models && \
+    cd /workspace/models && sudo git clone --depth 1 https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1
+
 COPY entrypoint.sh .
 
 RUN chmod +x /workspace/entrypoint.sh
