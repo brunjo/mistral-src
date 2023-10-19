@@ -8,4 +8,4 @@ else
 fi
 
 # Run the provided command
-exec python3 -u -m vllm.entrypoints.openai.api_server --host 0.0.0.0 --model "mistralai/Mistral-7B-Instruct-v0.1" --served-model-name "mistral-chat" --tensor-parallel-size 1
+exec python3 -u -m vllm.entrypoints.openai.api_server --host 0.0.0.0 --model "/workspace/models/Mistral-7B-Instruct-v0.1" --served-model-name "mistral-chat" --tensor-parallel-size 1
